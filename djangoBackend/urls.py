@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from django.urls import re_path as url
-from TimeMaster import views , authView
+from TimeMaster import views , authView, userView
 from knox import views as knox_views
 # nelax
 
@@ -31,5 +31,7 @@ urlpatterns = [
     path('api/login/',authView.LoginAPI.as_view(), name='login'),
     path('api/logout/',knox_views.LogoutView.as_view(), name='logout'),
     path('api/logoutall/',knox_views.LogoutAllView.as_view(), name='logoutall'),
+    path('user/',userView.userViewSet.as_view()),
+
     path('admin/', admin.site.urls),
 ]
