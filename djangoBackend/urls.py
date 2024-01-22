@@ -19,7 +19,7 @@ from django.urls import path, re_path
 from django.urls import re_path as url
 from TimeMaster import views , authView
 from knox import views as knox_views
-
+# nelax
 
 urlpatterns = [
     url(r'^student$',views.studentApi),
